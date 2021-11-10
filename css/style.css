@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background: #f3f3f3;
+}
+
+.container {
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto;
+}
+
+.container>h1 {
+    margin-left: 20px;
+    font-size: 46px;
+    padding: 20px;
+}
+
+
+/* .wrap-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-auto-rows: minmax(auto, auto);
+} */
+
+
+/* Sección introducción y menu de navegación del sitio */
+
+.introduction-web-site {
+    border-radius: 9px;
+    background-image: url('../img/banner-reto-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    padding: 36px 56px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    max-height: 300px;
+    font-weight: bold;
+    -webkit-box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.32);
+}
+
+.introduction-web-site h1 {
+    font-size: 43px;
+    color: #fff;
+    position: relative;
+}
+
+.introduction-web-site h1::before {
+    content: " ";
+    background: #ffdf00;
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.nav-menu-main {
+    width: 100%;
+    background: transparent;
+}
+
+nav a {
+    position: relative;
+    display: inline-block;
+    padding: 6px 9px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all .3s ease;
+}
+
+nav a:hover {
+    color: #ffdf00;
+}
+
+nav a::before {
+    content: " ";
+    background: #c5c5c5;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+nav a:hover::before {
+    display: block;
+}
+
+
+/* nav a:last-child::before {
+    background: none;
+} */
+
+nav .login {
+    color: #000;
+    background: #ffdf00;
+    border-radius: 9px;
+    font-weight: 900;
+    margin-left: 30px;
+    border: 1px solid #ffdf00;
+}
+
+nav .login:hover {
+    color: #fff;
+    background: none;
+    border: 1px solid #ffdf00;
+}
+
+
+/* Seccion bicicletas */
+
+.box-card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.32);
+    box-shadow: 1px 1px 12px 3px rgba(0, 0, 0, 0.32);
+    border-radius: 9px;
+}
+
+.box-card-client {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.card-inner {
+    width: 50%;
+    padding: 40px 30px;
+    overflow: auto;
+
+}
+
+.card-inner-fluid{
+    width: 100%;
+    padding: 40px 30px;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+}
+
+.inventario-bicicleta {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+.agregar-cliente {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+.registros-clientes {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+
+/* .box-table-category {
+    display: none;
+} */
+
+.box-elements-bicicletas {
+    /* background-color: #b5b5b5; */
+    display: none;
+    padding: 6px 16px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-elements-clientes {
+    display: none;
+    padding: 6px 16px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.box-elements-mensajes {
+    display: none;
+    padding: 6px 16px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+table {
+    font-family: 'Open Sans', sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: -15px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+td>button {
+    margin: 0 auto;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+thead {
+    background: #ffdf00;
+}
+
+select {
+    display: block;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: 0;
+}
+
+#selectClient, #selectBike{
+    display: inline-block;
+    width: 30%;
+    padding: 6px;
+    margin: 20px 90px;
+}
+
+.create-client {
+    width: 40%;
+}
+
+.create-client::before {
+    content: " ";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #000;
+}
+
+.view-client {
+    width: 50%;
+}
+
+.form-registrar-cliente {
+    text-align: center;
+}
+
+.agregar-producto {
+    width: 100%;
+    margin: 0 auto;
+    padding: 9px;
+}
+
+.agregar-producto+input {
+    text-align: center;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: -10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-message{
+    width: 100%;
+    display: block;
+}
+.form-message>input[type=number] {
+    width: 100%;
+    margin:0 auto;
+    margin-bottom: 30px;
+    border: 1px solid #000;
+    font-family: 'Open Sans', sans-serif
+}
+
+.title-messages{
+    text-align: center;
+    width: 100%;
+    
+}
+
+.form-message>textarea {
+    width: 100%;
+    display: block;
+    margin: 0;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #b5b5b5;
+    resize: none;
+    border-radius: 9px;
+}
+
+.buttons-message {
+    display: block;
+    
+}
+
+/*.buttons-message button:first-child {
+    margin-left: 60px;
+}*/
+
+span.span{
+    text-align: left;
+}
+
+button {
+    display: inline-block;
+    /* width: 90%; */
+    margin: 0 auto;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    transition: all .3s ease-in-out;
+    text-align: left;
+}
+
+button:first-child {
+    margin-bottom: 0;
+}
+
+button:hover {
+    border: 2px solid #000;
+    background: none;
+    color: #000;
+}
+
+.btn-xl{
+    width: 100%;
+    text-align: center;
+    
+}
+
+.red {
+    background: red;
+    color: #fff;
+    border-color: red;
+    margin-top: 0;
+    transition: all .4s ease;
+}
+
+.red:hover {
+    color: red;
+    background: none;
+    border-color: red;
+}
+
+.green {
+    background: springgreen;
+    color: #fff;
+    margin-top: 0;
+    border-color: springgreen;
+    transition: all .4s ease;
+}
+
+.green:hover {
+    color: springgreen;
+    border-color: springgreen;
+    background: none;
+}
